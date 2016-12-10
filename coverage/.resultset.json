@@ -26,6 +26,13 @@
         null,
         0,
         null,
+        null
+      ],
+      "/Users/NNS/Dropbox/Projects/console_browser/lib/parser.rb": [
+        1,
+        1,
+        3,
+        null,
         null,
         1,
         3,
@@ -70,12 +77,9 @@
       "/Users/NNS/Dropbox/Projects/console_browser/spec/support/aruba.rb": [
         1
       ],
-      "/Users/NNS/Dropbox/Projects/console_browser/spec/scraper_spec.rb": [
+      "/Users/NNS/Dropbox/Projects/console_browser/spec/parser_spec.rb": [
         1,
-        null,
-        null,
-        1,
-        1,
+        4,
         null,
         1,
         1,
@@ -92,23 +96,10 @@
         1,
         1,
         1,
-        1,
-        1,
         null,
         1,
         null,
         null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        1,
-        null,
-        null,
-        1,
         1,
         1,
         1,
@@ -120,12 +111,29 @@
         null,
         null
       ],
+      "/Users/NNS/Dropbox/Projects/console_browser/spec/scraper_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null
+      ],
       "/Users/NNS/Dropbox/Projects/console_browser/MPsite/lib/card_title_tag_map_test.rb": [
         1,
         1,
         null
       ]
     },
-    "timestamp": 1481398907
+    "timestamp": 1481399726
   }
 }

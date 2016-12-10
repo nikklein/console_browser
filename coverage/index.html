@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-12-10T12:08:26+00:00">2016-12-10T12:08:26+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-12-10T12:15:28+00:00">2016-12-10T12:15:28+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">60.0%</span></span>
+    (<span class="covered_percent"><span class="red">79.41%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.58
+         0.79
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>5</b> files in total.
-    <b>30</b> relevant lines. 
-    <span class="green"><b>18</b> lines covered</span> and
-    <span class="red"><b>12</b> lines missed </span>
+    <b>34</b> relevant lines. 
+    <span class="green"><b>27</b> lines covered</span> and
+    <span class="red"><b>7</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -52,12 +52,12 @@
       
       <tr>
         <td class="strong"><a href="#8b9a93db712a03213aa0ed05d97c46945dd72772" class="src_link" title="MPsite/sinatra_app/fake_movie_pilot.rb">MPsite/sinatra_app/fake_movie_pilot.rb</a></td>
-        <td class="red strong">70.0 %</td>
+        <td class="yellow strong">90.0 %</td>
         <td>19</td>
         <td>10</td>
-        <td>7</td>
-        <td>3</td>
-        <td>0.7</td>
+        <td>9</td>
+        <td>1</td>
+        <td>0.9</td>
       </tr>
       
       <tr>
@@ -72,22 +72,22 @@
       
       <tr>
         <td class="strong"><a href="#3a9b7451b650d1779732c3c0aaeddb3e94d2ff97" class="src_link" title="lib/scraper.rb">lib/scraper.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>0</td>
-        <td>0</td>
-        <td>0</td>
-        <td>0</td>
-        <td>0.0</td>
+        <td class="red strong">75.0 %</td>
+        <td>7</td>
+        <td>4</td>
+        <td>3</td>
+        <td>1</td>
+        <td>0.8</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#a2921993cb2fca107c10c1f22deccd2dadd8308c" class="src_link" title="spec/scraper_spec.rb">spec/scraper_spec.rb</a></td>
-        <td class="red strong">50.0 %</td>
+        <td class="green strong">100.0 %</td>
         <td>13</td>
         <td>8</td>
-        <td>4</td>
-        <td>4</td>
-        <td>0.5</td>
+        <td>8</td>
+        <td>0</td>
+        <td>1.0</td>
       </tr>
       
       <tr>
@@ -119,11 +119,11 @@
         <div class="source_table" id="8b9a93db712a03213aa0ed05d97c46945dd72772">
   <div class="header">
     <h3>MPsite/sinatra_app/fake_movie_pilot.rb</h3>
-    <h4><span class="red">70.0 %</span> covered</h4>
+    <h4><span class="yellow">90.0 %</span> covered</h4>
     <div>
       <b>10</b> relevant lines. 
-      <span class="green"><b>7</b> lines covered</span> and
-      <span class="red"><b>3</b> lines missed.</span>
+      <span class="green"><b>9</b> lines covered</span> and
+      <span class="red"><b>1</b> lines missed.</span>
     </div>
   </div>
   
@@ -154,8 +154,8 @@
           <code class="ruby">  get &#39;/&#39; do</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="5">
-          
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
           
           <code class="ruby">    file_read(&#39;./MPsite/public/&#39;, &#39;MainPage.htm&#39;)</code>
         </li>
@@ -214,8 +214,8 @@
           <code class="ruby">  def file_read(path, filename)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="15">
-          
+        <li class="covered" data-hits="1" data-linenumber="15">
+          <span class="hits">1</span>
           
           <code class="ruby">    File.read(File.join(path, filename))</code>
         </li>
@@ -365,16 +365,58 @@
         <div class="source_table" id="3a9b7451b650d1779732c3c0aaeddb3e94d2ff97">
   <div class="header">
     <h3>lib/scraper.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
+    <h4><span class="red">75.0 %</span> covered</h4>
     <div>
-      <b>0</b> relevant lines. 
-      <span class="green"><b>0</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
+      <b>4</b> relevant lines. 
+      <span class="green"><b>3</b> lines covered</span> and
+      <span class="red"><b>1</b> lines missed.</span>
     </div>
   </div>
   
   <pre>
     <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class Scraper</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def scrape(url)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    Nokogiri::HTML(open(url))</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby">  rescue</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="5">
+          
+          
+          <code class="ruby">    &#39;Something went wrong&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby">end</code>
+        </li>
       
     </ol>
   </pre>
@@ -383,11 +425,11 @@
         <div class="source_table" id="a2921993cb2fca107c10c1f22deccd2dadd8308c">
   <div class="header">
     <h3>spec/scraper_spec.rb</h3>
-    <h4><span class="red">50.0 %</span> covered</h4>
+    <h4><span class="green">100.0 %</span> covered</h4>
     <div>
       <b>8</b> relevant lines. 
-      <span class="green"><b>4</b> lines covered</span> and
-      <span class="red"><b>4</b> lines missed.</span>
+      <span class="green"><b>8</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
   
@@ -424,20 +466,20 @@
           <code class="ruby">      scraper = Scraper.new</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="6">
-          
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
           
           <code class="ruby">      link = &#39;http://moviepilot.com&#39;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="7">
-          
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
           
           <code class="ruby">      test_data = File.read(&#39;./Mpsite/public/test_data.html&#39;)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="8">
-          
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
           
           <code class="ruby">      scrape_page = scraper.scrape(link)</code>
         </li>
@@ -448,8 +490,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="10">
-          
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
           
           <code class="ruby">      expect(scrape_page.to_html).to eq(test_data)</code>
         </li>

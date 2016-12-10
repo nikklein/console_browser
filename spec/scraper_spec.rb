@@ -1,5 +1,5 @@
 require './MPsite/lib/card_title_tag_map_test.rb'
-require './MPsite/lib/article_test.rb'
+# require './MPsite/lib/article_test.rb'
 
 describe 'Scraper' do
   before do
@@ -41,7 +41,7 @@ describe 'Scraper' do
       url = 'http://moviepilot.com/blogpost'
       xpath = '//h2 | //p'
       article = scraper.extract_article(url, xpath)
-
+      text = File.read('./Mpsite/lib/article_test.txt').strip
       expect(article).to eq(text)
     end
   end

@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-12-10T13:17:46+00:00">2016-12-10T13:17:46+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-12-10T13:29:31+00:00">2016-12-10T13:29:31+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="yellow">81.4%</span></span>
+    (<span class="covered_percent"><span class="yellow">84.44%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.79
+         0.9
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>5</b> files in total.
-    <b>43</b> relevant lines. 
-    <span class="green"><b>35</b> lines covered</span> and
-    <span class="red"><b>8</b> lines missed </span>
+    <b>45</b> relevant lines. 
+    <span class="green"><b>38</b> lines covered</span> and
+    <span class="red"><b>7</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -57,7 +57,7 @@
         <td>10</td>
         <td>9</td>
         <td>1</td>
-        <td>0.9</td>
+        <td>1.1</td>
       </tr>
       
       <tr>
@@ -72,22 +72,22 @@
       
       <tr>
         <td class="strong"><a href="#3a9b7451b650d1779732c3c0aaeddb3e94d2ff97" class="src_link" title="lib/scraper.rb">lib/scraper.rb</a></td>
-        <td class="red strong">75.0 %</td>
-        <td>7</td>
-        <td>4</td>
-        <td>3</td>
+        <td class="yellow strong">83.33 %</td>
+        <td>11</td>
+        <td>6</td>
+        <td>5</td>
         <td>1</td>
-        <td>0.8</td>
+        <td>1.0</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#a2921993cb2fca107c10c1f22deccd2dadd8308c" class="src_link" title="spec/scraper_spec.rb">spec/scraper_spec.rb</a></td>
-        <td class="green strong">94.12 %</td>
+        <td class="green strong">100.0 %</td>
         <td>26</td>
         <td>17</td>
-        <td>16</td>
-        <td>1</td>
-        <td>0.9</td>
+        <td>17</td>
+        <td>0</td>
+        <td>1.0</td>
       </tr>
       
       <tr>
@@ -154,8 +154,8 @@
           <code class="ruby">  get &#39;/&#39; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="5">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="5">
+          <span class="hits">2</span>
           
           <code class="ruby">    file_read(&#39;./MPsite/public/&#39;, &#39;MainPage.htm&#39;)</code>
         </li>
@@ -214,8 +214,8 @@
           <code class="ruby">  def file_read(path, filename)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="15">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="15">
+          <span class="hits">2</span>
           
           <code class="ruby">    File.read(File.join(path, filename))</code>
         </li>
@@ -365,10 +365,10 @@
         <div class="source_table" id="3a9b7451b650d1779732c3c0aaeddb3e94d2ff97">
   <div class="header">
     <h3>lib/scraper.rb</h3>
-    <h4><span class="red">75.0 %</span> covered</h4>
+    <h4><span class="yellow">83.33 %</span> covered</h4>
     <div>
-      <b>4</b> relevant lines. 
-      <span class="green"><b>3</b> lines covered</span> and
+      <b>6</b> relevant lines. 
+      <span class="green"><b>5</b> lines covered</span> and
       <span class="red"><b>1</b> lines missed.</span>
     </div>
   </div>
@@ -388,8 +388,8 @@
           <code class="ruby">  def scrape(url)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="3">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="3">
+          <span class="hits">2</span>
           
           <code class="ruby">    Nokogiri::HTML(open(url))</code>
         </li>
@@ -415,6 +415,30 @@
         <li class="never" data-hits="" data-linenumber="7">
           
           
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def parse_page(link, xpath)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    scrape(link).xpath(xpath)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
           <code class="ruby">end</code>
         </li>
       
@@ -425,11 +449,11 @@
         <div class="source_table" id="a2921993cb2fca107c10c1f22deccd2dadd8308c">
   <div class="header">
     <h3>spec/scraper_spec.rb</h3>
-    <h4><span class="green">94.12 %</span> covered</h4>
+    <h4><span class="green">100.0 %</span> covered</h4>
     <div>
       <b>17</b> relevant lines. 
-      <span class="green"><b>16</b> lines covered</span> and
-      <span class="red"><b>1</b> lines missed.</span>
+      <span class="green"><b>17</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
   
@@ -547,7 +571,7 @@
         <li class="covered" data-hits="1" data-linenumber="19">
           <span class="hits">1</span>
           
-          <code class="ruby">      test_data = File.read(&#39;./Mpsite/public/card_title_tag_parse_test.html&#39;)</code>
+          <code class="ruby">      test_data = File.read(&#39;./Mpsite/public/card_title_tag_parse_test.html&#39;).strip</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="20">
@@ -568,10 +592,10 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="23">
+        <li class="covered" data-hits="1" data-linenumber="23">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">      expect(parsed_page).to eq(test_data)</code>
+          <code class="ruby">      expect(parsed_page.to_html).to eq(test_data)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="24">

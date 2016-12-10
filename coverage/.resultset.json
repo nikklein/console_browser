@@ -30,6 +30,12 @@
         1,
         2,
         null,
+        null,
+        1,
+        1,
+        61,
+        1,
+        null,
         null
       ],
       "/Users/NNS/Dropbox/Projects/console_browser/MPsite/sinatra_app/fake_movie_pilot.rb": [
@@ -89,17 +95,18 @@
         1,
         1,
         1,
-        1,
         null,
-        0,
+        1,
         null,
         null,
         null
       ],
       "/Users/NNS/Dropbox/Projects/console_browser/MPsite/lib/card_title_tag_map_test.rb": [
-        1
+        1,
+        1,
+        null
       ]
     },
-    "timestamp": 1481377252
+    "timestamp": 1481378618
   }
 }

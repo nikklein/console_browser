@@ -1,4 +1,4 @@
-# Console Browser 1.0
+# Console Browser 1.0 [![Build Status](https://travis-ci.com/nikklein/console_browser.svg?token=Bedzs9s6UyHjz6zMhb8Z&branch=master)](https://travis-ci.com/nikklein/console_browser)
 
 #### This app allows users to browse websites using a command line.
 

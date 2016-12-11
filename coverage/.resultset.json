@@ -1,65 +1,6 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/NNS/Dropbox/Projects/console_browser/lib/browser.rb": [
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        1,
-        0,
-        0,
-        null,
-        null,
-        1,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        0,
-        null,
-        null,
-        1,
-        0,
-        null,
-        null,
-        1,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        null,
-        null,
-        1,
-        0,
-        null,
-        null
-      ],
       "/Users/NNS/Dropbox/Projects/console_browser/lib/scraper.rb": [
         1,
         1,
@@ -188,6 +129,6 @@
         null
       ]
     },
-    "timestamp": 1481471504
+    "timestamp": 1481473594
   }
 }

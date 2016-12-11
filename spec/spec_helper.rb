@@ -1,7 +1,6 @@
 require 'simplecov'
 SimpleCov.start
 require 'aruba'
-require './lib/browser.rb'
 require './lib/scraper.rb'
 require './lib/parser.rb'
 require 'webmock/rspec'

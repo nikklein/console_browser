@@ -2,4 +2,4 @@ language: ruby
 rvm:
   - 2.2.0
 script:
-  -p spec && bundle exec rspec spec
+  mkdir -p spec && bundle exec rspec spec

@@ -1,5 +1,5 @@
-require 'simplecov'
-SimpleCov.start
+require 'coveralls'
+Coveralls.wear!
 require './lib/scraper.rb'
 require './lib/parser.rb'
 require 'webmock/rspec'

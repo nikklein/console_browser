@@ -1,4 +1,4 @@
-# Console Browser 1.0  [![Build Status](https://travis-ci.org/nikklein/console_browser.svg?branch=master)](https://travis-ci.org/nikklein/console_browser)
+# Console Browser 1.0  [![Build Status](https://travis-ci.org/nikklein/console_browser.svg?branch=master)](https://travis-ci.org/nikklein/console_browser) [![Coverage Status](https://coveralls.io/repos/github/nikklein/console_browser/badge.svg?branch=master)](https://coveralls.io/github/nikklein/console_browser?branch=master)
 
 #### This app allows users to browse websites using a command line.
 

@@ -5,7 +5,7 @@ describe Parser do
   describe '#parse_page' do
     it 'should parse specific tags from a scraped page using an XPath expression' do
       url = 'http://moviepilot.com'
-      test_data = File.read('Mpsite/public/card_title_tag_parse_test.html').strip
+      test_data = File.read('spec/Mpsite/public/card_title_tag_parse_test.html').strip
       xpath = '//h3[@class="card__title"]/a'
       parsed_page = subject.parse_page(url, xpath)
 
@@ -26,7 +26,7 @@ describe Parser do
       url = 'http://moviepilot.com/blogpost'
       xpath = '//h2 | //p'
       article = subject.extract_article(url, xpath)
-      text = File.read('Mpsite/lib/article_test.txt').strip
+      text = File.read('spec/Mpsite/lib/article_test.txt').strip
       expect(article).to eq(text)
     end
   end

@@ -40,7 +40,7 @@
         null,
         null
       ],
-      "/Users/NNS/Dropbox/Projects/console_browser/MPsite/sinatra_app/fake_movie_pilot.rb": [
+      "/Users/NNS/Dropbox/Projects/console_browser/spec/MPsite/sinatra_app/fake_movie_pilot.rb": [
         1,
         null,
         1,
@@ -120,12 +120,12 @@
         null,
         null
       ],
-      "/Users/NNS/Dropbox/Projects/console_browser/MPsite/lib/card_title_tag_map_test.rb": [
+      "/Users/NNS/Dropbox/Projects/console_browser/spec/MPsite/lib/card_title_tag_map_test.rb": [
         1,
         1,
         null
       ]
     },
-    "timestamp": 1481475053
+    "timestamp": 1481475677
   }
 }

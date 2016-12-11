@@ -4,11 +4,11 @@ require 'rainbow'
 class Browser
   XPATH_MAIN = '//h3[@class="card__title"]/a'.freeze
   XPATH_ARTICLE = '//h2 | //p'.freeze
-  CHOICES = %w(moviepilot.com champions.co nowloading.co quit).freeze
+  QUIT = 'Quit'.freeze
+  CHOICES = %w(moviepilot.com champions.co nowloading.co Quit).freeze
   PREFIX = %w(http:// https://).freeze
   GREETING = 'Hey buddy! It is a good time to browse some cool stuff.'.freeze
   MESSAGE = 'Choose link'.freeze
-  QUIT = 'quit'.freeze
   LOAD_MORE = 'Load more articles'.freeze
   WEBSITE = 'moviepilot.com'.freeze
   RANGE_MIN = 0

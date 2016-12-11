@@ -6,6 +6,7 @@ require './lib/scraper.rb'
 require './lib/parser.rb'
 require 'webmock/rspec'
 require './MPsite/sinatra_app/fake_movie_pilot.rb'
+
 WebMock.disable_net_connect!(allow_localhost: true)
 
 RSpec.configure do |config|

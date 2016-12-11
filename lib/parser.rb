@@ -1,4 +1,6 @@
 class Parser
+  HEADER = 'h2'.freeze
+
   def initialize(scraper)
     @scraper = scraper
   end
@@ -16,7 +18,7 @@ class Parser
   def extract_article(url, xpath)
     parsed = parse_page(url, xpath)
     parsed_to_text = parsed.text.strip
-    headers = parsed.css('h2').map(&:text)
+    headers = parsed.css(HEADER).map(&:text)
     headers.each { |el| parsed_to_text.gsub!(el, "\n\n#{el.upcase}\n\n").tr('"', "'") }
     parsed_to_text
   end

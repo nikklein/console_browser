@@ -1,5 +1,6 @@
 describe Parser do
-  let(:subject) { Parser.new(Scraper.new) }
+  scraper = Scraper.new
+  let(:subject) { Parser.new(scraper) }
 
   describe '#parse_page' do
     it 'should parse specific tags from a scraped page using an XPath expression' do

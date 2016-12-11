@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-12-11T17:11:01+00:00">2016-12-11T17:11:01+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-12-11T17:39:23+00:00">2016-12-11T17:39:23+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.14
+         2.09
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>6</b> files in total.
-    <b>72</b> relevant lines. 
-    <span class="green"><b>72</b> lines covered</span> and
+    <b>75</b> relevant lines. 
+    <span class="green"><b>75</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -93,9 +93,9 @@
       <tr>
         <td class="strong"><a href="#5042d246183486fc5a16910b55eb518b8e5d6341" class="src_link" title="spec/parser_spec.rb">spec/parser_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>34</td>
-        <td>24</td>
-        <td>24</td>
+        <td>35</td>
+        <td>25</td>
+        <td>25</td>
         <td>0</td>
         <td>1.1</td>
       </tr>
@@ -103,9 +103,9 @@
       <tr>
         <td class="strong"><a href="#a2921993cb2fca107c10c1f22deccd2dadd8308c" class="src_link" title="spec/scraper_spec.rb">spec/scraper_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>22</td>
-        <td>14</td>
-        <td>14</td>
+        <td>24</td>
+        <td>16</td>
+        <td>16</td>
         <td>0</td>
         <td>1.1</td>
       </tr>
@@ -545,8 +545,8 @@
     <h3>spec/parser_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>24</b> relevant lines. 
-      <span class="green"><b>24</b> lines covered</span> and
+      <b>25</b> relevant lines. 
+      <span class="green"><b>25</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -569,190 +569,196 @@
         <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
-          <code class="ruby">  PATH = &#39;../console_browser/spec/Mpsite/&#39;.freeze</code>
+          <code class="ruby">  path = File.expand_path(&#39;../../spec/MPsite/&#39;, __FILE__)</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="4">
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  PATH = path.freeze</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="5">
           <span class="hits">4</span>
           
           <code class="ruby">  let(:subject) { Parser.new(scraper) }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="5">
+        <li class="never" data-hits="" data-linenumber="6">
           
           
           <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="6">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  describe &#39;#parse_page&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="7">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &#39;should parse specific tags from a scraped page using an XPath expression&#39; do</code>
+          <code class="ruby">  describe &#39;#parse_page&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="8">
           <span class="hits">1</span>
           
-          <code class="ruby">      url = &#39;http://moviepilot.com&#39;</code>
+          <code class="ruby">    it &#39;should parse specific tags from a scraped page using an XPath expression&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="9">
           <span class="hits">1</span>
           
-          <code class="ruby">      test_data = File.read(PATH + &#39;/public/card_title_tag_parse_test.html&#39;).strip</code>
+          <code class="ruby">      url = &#39;http://moviepilot.com&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="10">
           <span class="hits">1</span>
           
-          <code class="ruby">      xpath = &#39;//h3[@class=&quot;card__title&quot;]/a&#39;</code>
+          <code class="ruby">      test_data = File.read(PATH + &#39;/public/card_title_tag_parse_test.html&#39;).strip</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="11">
           <span class="hits">1</span>
           
+          <code class="ruby">      xpath = &#39;//h3[@class=&quot;card__title&quot;]/a&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="12">
+          <span class="hits">1</span>
+          
           <code class="ruby">      parsed_page = subject.parse_page(url, xpath)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="12">
+        <li class="never" data-hits="" data-linenumber="13">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="13">
+        <li class="covered" data-hits="1" data-linenumber="14">
           <span class="hits">1</span>
           
           <code class="ruby">      expect(parsed_page.to_html).to eq(test_data)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="14">
+        <li class="never" data-hits="" data-linenumber="15">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="15">
+        <li class="never" data-hits="" data-linenumber="16">
           
           
           <code class="ruby">  end</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="16">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  describe &#39;#map_links&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="17">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &#39;should map description and links from parsed data&#39; do</code>
+          <code class="ruby">  describe &#39;#map_links&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="18">
           <span class="hits">1</span>
           
-          <code class="ruby">      url = &#39;http://moviepilot.com&#39;</code>
+          <code class="ruby">    it &#39;should map description and links from parsed data&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="19">
           <span class="hits">1</span>
           
-          <code class="ruby">      xpath = &#39;//h3[@class=&quot;card__title&quot;]/a&#39;</code>
+          <code class="ruby">      url = &#39;http://moviepilot.com&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="20">
           <span class="hits">1</span>
           
+          <code class="ruby">      xpath = &#39;//h3[@class=&quot;card__title&quot;]/a&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="21">
+          <span class="hits">1</span>
+          
           <code class="ruby">      mapped_data = subject.map_links(url, xpath)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="21">
+        <li class="never" data-hits="" data-linenumber="22">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="22">
+        <li class="covered" data-hits="1" data-linenumber="23">
           <span class="hits">1</span>
           
           <code class="ruby">      expect(mapped_data).to eq(test_array_of_links)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="23">
+        <li class="never" data-hits="" data-linenumber="24">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="24">
+        <li class="never" data-hits="" data-linenumber="25">
           
           
           <code class="ruby">  end</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="25">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  describe &#39;#extract_article&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="26">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &#39;should extract an article from a parsed page&#39; do</code>
+          <code class="ruby">  describe &#39;#extract_article&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="27">
           <span class="hits">1</span>
           
-          <code class="ruby">      url = &#39;http://moviepilot.com/blogpost&#39;</code>
+          <code class="ruby">    it &#39;should extract an article from a parsed page&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="28">
           <span class="hits">1</span>
           
-          <code class="ruby">      xpath = &#39;//h2 | //p&#39;</code>
+          <code class="ruby">      url = &#39;http://moviepilot.com/blogpost&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="29">
           <span class="hits">1</span>
           
-          <code class="ruby">      article = subject.extract_article(url, xpath)</code>
+          <code class="ruby">      xpath = &#39;//h2 | //p&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="30">
           <span class="hits">1</span>
           
-          <code class="ruby">      text = File.read(PATH + &#39;/lib/article_test.txt&#39;).strip</code>
+          <code class="ruby">      article = subject.extract_article(url, xpath)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="31">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(article).to eq(text)</code>
+          <code class="ruby">      text = File.read(PATH + &#39;/lib/article_test.txt&#39;).strip</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="32">
+        <li class="covered" data-hits="1" data-linenumber="32">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    end</code>
+          <code class="ruby">      expect(article).to eq(text)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="33">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="34">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="35">
           
           
           <code class="ruby">end</code>
@@ -767,8 +773,8 @@
     <h3>spec/scraper_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>14</b> relevant lines. 
-      <span class="green"><b>14</b> lines covered</span> and
+      <b>16</b> relevant lines. 
+      <span class="green"><b>16</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -794,115 +800,127 @@
           <code class="ruby">describe Scraper do</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="4">
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  path = File.expand_path(&#39;../../spec/MPsite/&#39;, __FILE__)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  PATH = path.freeze</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="6">
           <span class="hits">3</span>
           
           <code class="ruby">  let(:subject) { Scraper.new }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="5">
+        <li class="never" data-hits="" data-linenumber="7">
           
           
           <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="6">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  describe &#39;#scrape&#39; do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="7">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    it &#39;should scrape a page from a website&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="8">
           <span class="hits">1</span>
           
-          <code class="ruby">      url = &#39;http://moviepilot.com&#39;</code>
+          <code class="ruby">  describe &#39;#scrape&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="9">
           <span class="hits">1</span>
           
-          <code class="ruby">      test_data = File.read(&#39;../console_browser/spec/Mpsite/public/test_data.html&#39;)</code>
+          <code class="ruby">    it &#39;should scrape a page from a website&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="10">
           <span class="hits">1</span>
           
-          <code class="ruby">      scrape_page = subject.scrape(url)</code>
+          <code class="ruby">      url = &#39;http://moviepilot.com&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="11">
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">      test_data = File.read(PATH + &#39;/public/test_data.html&#39;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="12">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(scrape_page.to_html).to eq(test_data)</code>
+          <code class="ruby">      scrape_page = subject.scrape(url)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="13">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="14">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &#39;should print an error if the request was unsuccessful&#39; do</code>
+          <code class="ruby">      expect(scrape_page.to_html).to eq(test_data)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="15">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      url = &#39;http://no.way/1&#39;</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="16">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      test_message = &#39;Something went wrong&#39;</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="17">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      scrape_page = subject.scrape(url)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="18">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="19">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      expect(scrape_page).to eq(test_message)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="20">
+        <li class="never" data-hits="" data-linenumber="15">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="21">
+        <li class="covered" data-hits="1" data-linenumber="16">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &#39;should print an error if the request was unsuccessful&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="17">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      url = &#39;http://no.way/1&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="18">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      test_message = &#39;Something went wrong&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      scrape_page = subject.scrape(url)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="20">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="21">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(scrape_page).to eq(test_message)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="22">
+        <li class="never" data-hits="" data-linenumber="24">
           
           
           <code class="ruby">end</code>

@@ -1,6 +1,7 @@
 describe Parser do
   scraper = Scraper.new
-  PATH = './Mpsite'.freeze
+  path = File.expand_path('../../spec/MPsite/', __FILE__)
+  PATH = path.freeze
   let(:subject) { Parser.new(scraper) }
 
   describe '#parse_page' do

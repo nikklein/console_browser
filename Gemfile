@@ -7,7 +7,6 @@ gem 'tty-prompt'
 gem 'rainbow'
 
 group :test do
-  gem 'aruba', '~> 0.14.2'
   gem 'simplecov', require: false
   gem 'rake'
   gem 'sinatra'

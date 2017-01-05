@@ -10,7 +10,7 @@ class Browser
   GREETING = 'Hey buddy! It is a good time to browse some cool stuff.'.freeze
   MESSAGE = 'Choose link'.freeze
   LOAD_MORE = 'Load more articles'.freeze
-  WEBSITE = 'moviepilot.com'.freeze
+  WEBSITE = 'A website that uses http'.freeze
   RANGE_MIN = 0
   RANGE_MAX = 20
 
@@ -60,6 +60,7 @@ class Browser
   end
 
   def create_url(answer)
+    return PREFIX.first + answer if answer == WEBSITE
     PREFIX.last + answer
   end
 

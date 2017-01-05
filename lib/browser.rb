@@ -19,30 +19,64 @@ class Browser
     @prompt = TTY::Prompt.new
   end
 
-  def start
+  def start(greeting = GREETING, choices = CHOICES)
     puts
-    answer = prompt(GREETING, CHOICES)
+    answer = prompt(greeting, choices)
     exit if answer == QUIT
-    url = PREFIX.last + answer
-    url = PREFIX.first + answer if answer == WEBSITE
-    list_of_links = map_links(url)
-    @links = list_of_links.first.keys
-    article_to_find = prompt(MESSAGE, showLessArticles)
+    browse(answer)
+  end
+
+  def browse(answer)
+    proccessed_data = proccess(answer)
+    article_to_find = make_choice(proccessed_data.last)
+    article_to_display = link_to_find(proccessed_data.first, proccessed_data[1], article_to_find)
+    display(article_to_display)
+    start
+  end
+
+  def proccess(answer)
+    url = create_url(answer)
+    mapped_links = create_list_of_links(url)
+    links = create_links(mapped_links)
+    [mapped_links, url, links]
+  end
+
+  def make_choice(links)
+    article_to_find = prompt(MESSAGE, show_less_articles(links))
     start if article_to_find == QUIT
     if article_to_find == LOAD_MORE
-      article_to_find = prompt(MESSAGE, showLessArticles) until article_to_find != LOAD_MORE
+      article_to_find = prompt(MESSAGE, show_less_articles(links)) until article_to_find != LOAD_MORE
       start if article_to_find == QUIT
     end
-    link_to_find = url + list_of_links.first[article_to_find]
-    puts Rainbow(getArticle(link_to_find, XPATH_ARTICLE)).aqua
-    start
+    article_to_find
+  end
+
+  def create_list_of_links(url)
+    map_links(url)
+  end
+
+  def create_links(mapped_links)
+    mapped_links.first.keys
+  end
+
+  def create_url(answer)
+    return PREFIX.first + answer if answer == WEBSITE
+    PREFIX.last + answer
+  end
+
+  def link_to_find(list_of_links, url, article_to_find)
+    url + list_of_links.first[article_to_find]
+  end
+
+  def display(link_to_find)
+    puts Rainbow(get_article(link_to_find, XPATH_ARTICLE)).aqua
   end
 
   def prompt(message, choices)
     @prompt.select(message, choices)
   end
 
-  def getArticle(link_to_go, xpath)
+  def get_article(link_to_go, xpath)
     @parser.extract_article(link_to_go, xpath)
   end
 
@@ -50,10 +84,10 @@ class Browser
     @parser.map_links(url, XPATH_MAIN)
   end
 
-  def showLessArticles
-    sliced = @links.slice!(RANGE_MIN..RANGE_MAX)
-    @links << sliced
-    @links.flatten!
+  def show_less_articles(links)
+    sliced = links.slice!(RANGE_MIN..RANGE_MAX)
+    links << sliced
+    links.flatten!
     sliced << LOAD_MORE
     sliced << QUIT
     sliced

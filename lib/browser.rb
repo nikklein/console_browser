@@ -60,7 +60,6 @@ class Browser
   end
 
   def create_url(answer)
-    return PREFIX.first + answer if answer == WEBSITE
     PREFIX.last + answer
   end
 

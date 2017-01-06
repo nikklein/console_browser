@@ -27,14 +27,14 @@ class Browser
   end
 
   def browse(answer)
-    proccessed_data = proccess(answer)
-    article_to_find = make_choice(proccessed_data.last)
-    article_to_display = link_to_find(proccessed_data.first, proccessed_data[1], article_to_find)
+    processed_data = process(answer)
+    article_to_find = make_choice(processed_data.last)
+    article_to_display = link_to_find(processed_data.first, processed_data[1], article_to_find)
     display(article_to_display)
     start
   end
 
-  def proccess(answer)
+  def process(answer)
     url = create_url(answer)
     mapped_links = create_list_of_links(url)
     links = create_links(mapped_links)

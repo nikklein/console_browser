@@ -36,7 +36,7 @@ class Browser
 
   def process(answer)
     url = create_url(answer)
-    mapped_links = create_list_of_links(url)
+    mapped_links = @parser.map_links(url, XPATH_MAIN)
     links = create_links(mapped_links)
     [mapped_links, url, links]
   end
@@ -49,10 +49,6 @@ class Browser
       start if article_to_find == QUIT
     end
     article_to_find
-  end
-
-  def create_list_of_links(url)
-    map_links(url)
   end
 
   def create_links(mapped_links)
@@ -69,19 +65,11 @@ class Browser
   end
 
   def display(link_to_find)
-    puts Rainbow(get_article(link_to_find, XPATH_ARTICLE)).aqua
+    puts Rainbow(@parser.extract_article(link_to_find, XPATH_ARTICLE)).aqua
   end
 
   def prompt(message, choices)
     @prompt.select(message, choices)
-  end
-
-  def get_article(link_to_go, xpath)
-    @parser.extract_article(link_to_go, xpath)
-  end
-
-  def map_links(url)
-    @parser.map_links(url, XPATH_MAIN)
   end
 
   def show_less_articles(links)

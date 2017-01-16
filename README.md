@@ -6,7 +6,7 @@
 
 ###### Clone the repository
 ```
-$ git clone git@github.com:nikklein/console_browser.git>
+$ git clone git@github.com:nikklein/console_browser.git
 
 $ cd console_browser
 ```
